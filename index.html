@@ -23,8 +23,8 @@
 				<div class="css-6h3u5t-Masthead main-header">
 					<header class="css-1pj0y2g-Masthead">
 						<div>
-							<a href="https://impact.economist.com/" target="_blank" rel="noopener noreferrer" class="css-i799wi-Masthead">
-								<img style="object-fit: contain;" alt="The Economist logo" src="images/sample-logo.png" class="css-Logo">
+							<a href="#" target="_blank" rel="noopener noreferrer" class="css-i799wi-Masthead">
+								<img style="object-fit: contain;" alt="The Branch logo" src="images/sample-logo.png" class="css-Logo">
 							</a>
 						</div>
 					</header>
@@ -36,7 +36,7 @@
 					
 					<div id="sponsored-text-container" class="sponsored-content-text">
 						<p>
-						Our sponsors provide financial support for this website. We endeavour to give our sponsors the opportunity to communicate their messages in placements that are clearly demarcated. Such placements are clearly labelled as Advertisement, Advertisement feature, Sponsored content, Sponsor's perspective, "Brought to you by" the sponsor or words to that effect. Occasionally, we group together content from various sources relating to the same topic. In cases where content from The Economist Group is included, it will be clearly labelled as from The Economist or Economist Intelligence Unit. At all times there is a clear division between our editorial staff and sponsors, and sponsors are never allowed to influence what our editorial teams write. Sponsors are solely responsible for their content, and their views do not necessarily reflect those of The Economist.
+						Our sponsors provide financial support for this website. We endeavour to give our sponsors the opportunity to communicate their messages in placements that are clearly demarcated. Such placements are clearly labelled as Advertisement, Advertisement feature, Sponsored content, Sponsor's perspective, "Brought to you by" the sponsor or words to that effect. Occasionally, we group together content from various sources relating to the same topic. In cases where content from The Branch Group is included, it will be clearly labelled as from The Branch or Brand Intelligence Unit. At all times there is a clear division between our editorial staff and sponsors, and sponsors are never allowed to influence what our editorial teams write. Sponsors are solely responsible for their content, and their views do not necessarily reflect those of The Branch.
 						</p>
 						<span id="close-sponsored-text">
 							<img src="images/close-icon.png" alt="close-icon">
@@ -570,10 +570,10 @@
 						<div class="css-f09p1c-TopLayer fullwidth">
 							<div class="css-65infu-TopLayer fullwidth">
 								<ul class="css-13xpa7k-Sublist">
-									<li><a href="https://www.economist.com/subscribe"><span>Subscribe</span></a></li>
-									<li><a href="https://groupsubscriptions.economist.com/"><span>Group subscriptions</span></a></li>
+									<li><a href="https://www.Brand.com/subscribe"><span>Subscribe</span></a></li>
+									<li><a href="https://groupsubscriptions.Brand.com/"><span>Group subscriptions</span></a></li>
 									<li><a href="#"><span>Reuse our content</span></a></li>
-									<li><a href="https://www.economist.com/help/home"><span>Help and contact us</span></a></li>
+									<li><a href="https://www.Brand.com/help/home"><span>Help and contact us</span></a></li>
 								</ul>
 							</div>
 							
@@ -582,20 +582,20 @@
 						<div class="css-1tjwx5y-BottomLayer">
 							<div class="bottom-link">
 								<ul class="css-1g6aune-Left">
-									<li><a href="https://www.economist.com/legal/terms-of-use"><span>Terms of Use</span></a></li>
-									<li><a href="https://www.economistgroup.com/results_and_governance/governance/privacy/"><span>Privacy</span></a></li>
-									<li><a href="https://www.economistgroup.com/results_and_governance/governance/Cookies_information.html"><span>Cookie Policy</span></a></li>
+									<li><a href="#"><span>Terms of Use</span></a></li>
+									<li><a href="#"><span>Privacy</span></a></li>
+									<li><a href="#"><span>Cookie Policy</span></a></li>
 									<li>
 										<!-- For New Consent -->
 										<a href="#privacy-manager" class="open-popup-link ec-footer__link" onclick="javascript: window._cmp_.open();">Manage Cookies</a>
 									</li>
-									<li><a href="https://www.economist.com/help/accessibilitypolicy"><span>Accessibility</span></a></li>
-									<li><a href="https://www.economistgroup.com/results_and_governance/governance/guiding_principles.html"><span>Modern Slavery Statement</span></a></li>
-									<li><a href="https://www.economistgroup.com/results_and_governance/governance/guiding_principles.html"><span>Do Not Sell My Personal Information</span></a></li>
+									<li><a href="#"><span>Accessibility</span></a></li>
+									<li><a href="#"><span>Modern Slavery Statement</span></a></li>
+									<li><a href="#"><span>Do Not Sell My Personal Information</span></a></li>
 								</ul>
 							</div>
 							<div class="css-1b1i8gz-Right">
-								<p>Copyright © The Economist Newspaper Limited 2019. All rights reserved.</p>
+								<p>Copyright © The Branch Newspaper Limited 2019. All rights reserved.</p>
 							</div>
 						</div>
 					</footer>
@@ -1030,56 +1030,6 @@
 		});
   	</script>
 
-	<script>
-		/**
-
-		* GA Events
-
-		*/
-		
-		$("#toggle-sponsored-text").on("click", function() {
-		$(".sponsored-content-text").slideToggle().toggleClass("advert-open");
-		console.log($('.sponsored-content-text').hasClass('advert-open'));
-		if ($('.sponsored-content-text').hasClass('advert-open')) {
-			ga('send', 'event', 'Open-Content', 'Advertisement-Feature', 'open');
-		}
-		else {
-			ga('send', 'event', 'Open-Content', 'Advertisement-Feature', 'close');
-		}
-		});
-		$('#close-sponsored-text').on('click', function() {
-		$('.sponsored-content-text').slideUp();
-		ga('send', 'event', 'Open-Content', 'Advertisement-Feature', 'close');
-		})
-		jQuery(function () {
-		jQuery.scrollDepth({
-		eventHandler: function (data) {
-			if (data.event == 'ScrollDistance' && data.eventLabel == '25%') {
-			ga('send', 'event', 'scroll-depth', '25%', '<?php the_title(); ?>-scroll25');
-			} else if (data.event == 'ScrollDistance' && data.eventLabel == '50%') {
-			ga('send', 'event', 'scroll-depth', '50%', '<?php the_title(); ?>-scroll50');
-			} else if (data.event == 'ScrollDistance' && data.eventLabel == '75%') {
-			ga('send', 'event', 'scroll-depth', '75%', '<?php the_title(); ?>-scroll75');
-			} else if (data.event == 'ScrollDistance' && data.eventLabel == '100%') {
-			ga('send', 'event', 'scroll-depth', '100%', '<?php the_title(); ?>-scroll100');
-
-			}
-		}
-		});
-		});
-
-		var seconds = 0;
-		function incrementSeconds() {
-		seconds += 1;
-		if (seconds >= 15) {
-			clearInterval(timer);
-			ga('send', 'event', '15_seconds', 'Read', '<?php the_title(); ?>');
-		}
-
-		}
-
-		var timer = setInterval(incrementSeconds, 1000);
-	</script>
 
     </body>
 
